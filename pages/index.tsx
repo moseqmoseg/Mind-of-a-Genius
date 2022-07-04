@@ -1,9 +1,11 @@
 import type { NextPage } from 'next'
 import { useState } from 'react';
 import Head from 'next/head'
-import { Box, Title, Blockquote, Button } from '@mantine/core';
-import { Microphone2 } from 'tabler-icons-react';
-
+import { Text, Button } from '@mantine/core';
+import {
+  TwitterShareButton,
+} from 'next-share'
+import { AiOutlineTwitter } from "react-icons/ai";
 import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
@@ -25,24 +27,29 @@ const Home: NextPage = () => {
       <Head>
         <title>Guide me Kanye</title>
         <meta name="description" content="Created with Next.JS, Mantine and Kayne.rest" />
-        <link  rel="shortcut icon" href="/favicon.ico"  />
+        <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
-      <Box>
 
-        <p className={styles.title}>
+      <Text className={styles.title}>
 
-          The Mind of a Genius
-        </p>
+        The Mind of a Genius
+      </Text>
 
-        <Blockquote className={styles.quote} cite="– Kanye West"  icon={<Microphone2 size={24} color={"#4038D9"} />}  >
+      <Text className={styles.quote} >
+        “ {kanyeQuote} ”
+        <Text className={styles.kanye}> Kanye West</Text>
+      </Text>
 
-          {kanyeQuote}
-        </Blockquote>
+      <Button className={styles.button} onClick={() => { handleClick() }}>Kanye Wisdom</Button>
 
-        <Button className={styles.button} onClick={()=>{handleClick()}}>Kanye Wisdom</Button>
+      <TwitterShareButton
+        url={'https://kanyesaid.netlify.app/'}
+        title={` “ ${kanyeQuote} ” Kanye West. `}
+        hashtags={["kanyewest", "Yeezus", "Pablo", "Yeezy", "Ye", "MrWest"]}
 
-      </Box>
-
+      >
+        <AiOutlineTwitter className={styles.tweet} />
+      </TwitterShareButton>
 
     </div>
   )
