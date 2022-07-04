@@ -17,7 +17,7 @@
   color: #4038d9;
   font-weight: 900;
   font-size: 60px;
-  margin-bottom: 1em;
+  /* margin-bottom: 1em; */
 }
 
 .quote {
@@ -34,6 +34,7 @@
   min-height: 7em;
   max-height: 7em;
   height:fit-content;
+  margin-top: 0;
   overflow:auto;
 }
 
@@ -64,9 +65,16 @@
   border-radius: 50%;
   padding: 2px
   
-
 }
 
 .tweet:hover{
   background-color: #407ed7;
 }
+
+@media only screen and (min-height: 896px) { 
+  .title{
+    margin-bottom: 0;
+  }
+
+  .button{margin-bottom: 0;}
+ }
