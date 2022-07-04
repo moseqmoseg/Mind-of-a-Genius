@@ -1,3 +1,4 @@
+import styles from '../styles/Home.module.css'
 import type { NextPage } from 'next'
 import { useState } from 'react';
 import Head from 'next/head'
@@ -6,7 +7,7 @@ import {
   TwitterShareButton,
 } from 'next-share'
 import { AiOutlineTwitter } from "react-icons/ai";
-import styles from '../styles/Home.module.css'
+
 
 const Home: NextPage = () => {
   const [kanyeQuote, setkanyeQuote] = useState("Believe in your flyness…conquer your shyness.")
@@ -46,7 +47,6 @@ const Home: NextPage = () => {
         url={'https://kanyesaid.netlify.app/'}
         title={` “ ${kanyeQuote} ” Kanye West. `}
         hashtags={["kanyewest", "Yeezus", "Pablo", "Yeezy", "Ye", "MrWest"]}
-
       >
         <AiOutlineTwitter className={styles.tweet} />
       </TwitterShareButton>

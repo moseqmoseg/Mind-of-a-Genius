@@ -26,7 +26,7 @@
   flex-direction: column;
   justify-content: center;
   font-family: "Epilogue", sans-serif;
-  line-height: 1;
+  line-height: 1.5;
   font-style: italic;
   font-size: x-large;
   font-weight: 600;
@@ -34,7 +34,7 @@
   min-height: 7em;
   max-height: 7em;
   height:fit-content;
-  overflow:hidden;
+  overflow:auto;
 }
 
 .kanye{
@@ -61,8 +61,7 @@
   font-style: italic;
   color: #b2fcda;
   background-color: #4038d9;
-  width:-moz-fit-content;
-  width:fit-content;
+  
   margin-bottom: 2em;
   border-radius: 50%;
   padding: 2px
