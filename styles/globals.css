@@ -7,8 +7,7 @@ body {
   background-color: #b2fcda;
   overflow: -moz-hidden-unscrollable;
   overflow: hidden;
-  
-  min-height: -webkit-fill-available;
+  /* min-height: -webkit-fill-available; */
   min-height: 100vh;
  
 }
@@ -16,4 +15,11 @@ S
 
 * {
   box-sizing: border-box;
+}
+
+@media (max-width: 480px) {
+  body {
+    min-height: -webkit-fill-available;
+    min-height: 100vh;
+  }
 }
