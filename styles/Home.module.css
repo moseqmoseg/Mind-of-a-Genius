@@ -8,7 +8,8 @@
   text-align: center;
   padding: 0 2rem;
   font-family: "Epilogue", sans-serif;
-  height: 100vh;
+  min-height: -webkit-fill-available;
+  min-height: 100vh;
 }
 
 .title {
