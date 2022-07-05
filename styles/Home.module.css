@@ -44,15 +44,22 @@
   margin-top: 0.31em;
 }
 
+.buttonBox{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
 .button {
   color: #b2fcda;
   background-color: #4038d9;
   width: -moz-fit-content;
   width: fit-content;
-  /* margin-bottom: 0.1em; */
+  margin-bottom: 0.1em;
 }
 
 .tweet {
+  margin-top: 1em;
   color: #b2fcda;
   background-color: #4038d9;
   border-radius: 50%;

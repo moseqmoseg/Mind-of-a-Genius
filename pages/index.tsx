@@ -2,7 +2,7 @@ import styles from '../styles/Home.module.css'
 import type { NextPage } from 'next'
 import { useState } from 'react';
 import Head from 'next/head'
-import { Text, Button } from '@mantine/core';
+import { Text, Button, Box } from '@mantine/core';
 import {
   TwitterShareButton,
 } from 'next-share'
@@ -43,8 +43,7 @@ const [buttonText, setButtonText] = useState("Kanye Wisdom")
         “ {kanyeQuote} ”
         <Text className={styles.kanye}> Kanye West</Text>
       </Text>
-
-      <Button className={styles.button} onClick={() => { handleClick() }}>{buttonText}</Button>
+<Box className={styles.buttonBox}><Button className={styles.button} onClick={() => { handleClick() }}>{buttonText}</Button>
 
       <TwitterShareButton
         url={'https://kanyesaid.netlify.app/'}
@@ -52,7 +51,8 @@ const [buttonText, setButtonText] = useState("Kanye Wisdom")
         hashtags={["kanyewest", "Yeezus", "Pablo", "Yeezy", "Ye", "MrWest"]}
       >
         <AiOutlineTwitter className={styles.tweet} />
-      </TwitterShareButton>
+      </TwitterShareButton></Box>
+      
 
     </div>
   )
