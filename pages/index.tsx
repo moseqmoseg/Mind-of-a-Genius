@@ -3,15 +3,13 @@ import type { NextPage } from 'next'
 import { useState } from 'react';
 import Head from 'next/head'
 import { Text, Button, Box } from '@mantine/core';
-import {
-  TwitterShareButton,
-} from 'next-share'
+import { TwitterShareButton, } from 'next-share'
 import { AiOutlineTwitter } from "react-icons/ai";
 
 
 const Home: NextPage = () => {
   const [kanyeQuote, setkanyeQuote] = useState("Believe in your flyness…conquer your shyness.")
-const [buttonText, setButtonText] = useState("Kanye Wisdom")
+  const [buttonText, setButtonText] = useState("Kanye Wisdom")
 
   const handleClick = async () => {
     try {
@@ -43,16 +41,16 @@ const [buttonText, setButtonText] = useState("Kanye Wisdom")
         “ {kanyeQuote} ”
         <Text className={styles.kanye}> Kanye West</Text>
       </Text>
-<Box className={styles.buttonBox}><Button className={styles.button} onClick={() => { handleClick() }}>{buttonText}</Button>
+      <Box className={styles.buttonBox}><Button className={styles.button} onClick={() => { handleClick() }}>{buttonText}</Button>
 
-      <TwitterShareButton
-        url={'https://kanyesaid.netlify.app/'}
-        title={` “ ${kanyeQuote} ” Kanye West. `}
-        hashtags={["kanyewest", "Yeezus", "Pablo", "Yeezy", "Ye", "MrWest"]}
-      >
-        <AiOutlineTwitter className={styles.tweet} />
-      </TwitterShareButton></Box>
-      
+        <TwitterShareButton
+          url={'https://kanyesaid.netlify.app/'}
+          title={` “ ${kanyeQuote} ” Kanye West. `}
+          hashtags={["kanyewest", "Yeezus", "Pablo", "Yeezy", "Ye", "MrWest"]}
+        >
+          <AiOutlineTwitter className={styles.tweet} />
+        </TwitterShareButton></Box>
+
 
     </div>
   )

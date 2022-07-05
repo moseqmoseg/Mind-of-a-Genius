@@ -44,7 +44,7 @@
   margin-top: 0.31em;
 }
 
-.buttonBox{
+.buttonBox {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -64,7 +64,6 @@
   background-color: #4038d9;
   border-radius: 50%;
   padding: 0.125em;
-  
 }
 
 .tweet:hover {
@@ -73,7 +72,7 @@
 
 @media (max-width: 480px) {
   .quote {
-      width: -moz-fit-content;
-  width: fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
   }
 }
