@@ -3,78 +3,67 @@
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   text-align: center;
   padding: 0 2rem;
   font-family: "Epilogue", sans-serif;
-  background-color: #b2fcda;
   height: 100vh;
-  overflow:hidden;
 }
 
 .title {
   color: #4038d9;
   font-weight: 900;
-  font-size: 60px;
-  /* margin-bottom: 1em; */
+  font-size: 3.5em;
+  line-height: 1.1;
+  margin-bottom: 0.2em;
 }
 
 .quote {
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   font-family: "Epilogue", sans-serif;
   line-height: 1.5;
   font-style: italic;
   font-size: x-large;
   font-weight: 600;
   padding: 0;
-  min-height: 7em;
-  max-height: 7em;
-  height:fit-content;
-  margin-top: 0;
-  overflow:auto;
+  min-height: 11.5em;
+  max-height: 11.5em;
+  height: 11.5em;
+  width: 20em;
+  overflow: auto;
 }
 
-.kanye{
+.kanye {
   color: #4038d9;
   font-family: "Epilogue", sans-serif;
-  margin-top: 5px;
+  margin-top: 0.31em;
 }
 
 .button {
-  align-self: center;
-  margin-top: 1em;
-  font-style: italic;
   color: #b2fcda;
   background-color: #4038d9;
-  width:-moz-fit-content;
-  width:fit-content;
-  margin-bottom: 1em;
-
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-bottom: 0.1em;
 }
 
-.tweet{
-  align-self: center;
-  margin-top: 3px;
-  font-style: italic;
+.tweet {
   color: #b2fcda;
   background-color: #4038d9;
   border-radius: 50%;
-  padding: 2px
-  
+  padding: 0.125em;
 }
 
-.tweet:hover{
+.tweet:hover {
   background-color: #407ed7;
 }
 
-@media only screen and (min-height: 896px) { 
-  .title{
-    margin-bottom: 0;
+@media (max-width: 480px) {
+  .quote {
+      width: -moz-fit-content;
+  width: fit-content;
   }
-
-  .button{margin-bottom: 0;}
- }
+}

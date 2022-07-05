@@ -11,13 +11,14 @@ import { AiOutlineTwitter } from "react-icons/ai";
 
 const Home: NextPage = () => {
   const [kanyeQuote, setkanyeQuote] = useState("Believe in your flyness…conquer your shyness.")
-
+const [buttonText, setButtonText] = useState("Kanye Wisdom")
 
   const handleClick = async () => {
     try {
       let response = await fetch("https://api.kanye.rest")
       let quote = await response.json();
       setkanyeQuote(quote.quote)
+      setButtonText("More Kanye Wisdom")
     } catch (error) {
       console.log('Fetch error: ', error);
     }
@@ -31,6 +32,8 @@ const Home: NextPage = () => {
         <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
 
+      <audio src="/public/Audio/Jesus Walks.mp3" autoPlay={true} loop={true}></audio>
+
       <Text className={styles.title}>
 
         The Mind of a Genius
@@ -41,7 +44,7 @@ const Home: NextPage = () => {
         <Text className={styles.kanye}> Kanye West</Text>
       </Text>
 
-      <Button className={styles.button} onClick={() => { handleClick() }}>Kanye Wisdom</Button>
+      <Button className={styles.button} onClick={() => { handleClick() }}>{buttonText}</Button>
 
       <TwitterShareButton
         url={'https://kanyesaid.netlify.app/'}
