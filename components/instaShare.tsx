@@ -10,11 +10,19 @@ function instaShare() {
 function handleClick() {
 let quoteBox = document.getElementById('quoteBox')
 
-    htmlToImage.toPng(quoteBox)
+    htmlToImage.toPng(quoteBox, {  width: 400,
+        height: 300})
   .then(function (dataUrl: string) {
-    var img = new Image();
-    img.src = dataUrl;
-    document.body.appendChild(img);
+    const link = document.createElement('a');
+    link.download = 'file name';
+    link.href =dataUrl;
+    document.body.appendChild(link);
+
+    // Trigger the click event
+    link.click();
+    
+    // Remove the element
+    document.body.removeChild(link);
   })
   .catch(function (error: any) {
     console.error('oops, something went wrong!', error);
