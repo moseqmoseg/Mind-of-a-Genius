@@ -14,7 +14,7 @@ let quoteBox = document.getElementById('quoteBox')
         height:"500",backgroundColor:"blue" })
   .then(function (dataUrl: string) {
     const link = document.createElement('a');
-    link.download = 'file name';
+    link.download = 'Kanye_Quote_Insta_Story';
     link.href =dataUrl;
     document.body.appendChild(link);
 
