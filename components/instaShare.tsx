@@ -10,8 +10,8 @@ function instaShare() {
 function handleClick() {
 let quoteBox = document.getElementById('quoteBox')
 
-    htmlToImage.toPng(quoteBox, {  width: "540",
-        height:"960",backgroundColor:"#b2fcda" })
+    htmlToImage.toPng(quoteBox, {  width: "270",
+        height:"480",backgroundColor:"#b2fcda", style:{alignItems: 'center' } })
   .then(function (dataUrl: string) {
     const link = document.createElement('a');
     link.download = 'Kanye_Quote_Insta_Story';
