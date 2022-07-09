@@ -10,8 +10,8 @@ function instaShare() {
 function handleClick() {
 let quoteBox = document.getElementById('quoteBox')
 
-    htmlToImage.toPng(quoteBox, {  width: "400pxl",
-        height:"500pxl",backgroundColor:"blue" })
+    htmlToImage.toPng(quoteBox, {  width: "400",
+        height:"500",backgroundColor:"blue" })
   .then(function (dataUrl: string) {
     const link = document.createElement('a');
     link.download = 'file name';
