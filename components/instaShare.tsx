@@ -11,7 +11,7 @@ function handleClick() {
 let quoteBox = document.getElementById('quoteBox')
 
     htmlToImage.toPng(quoteBox, {  width: "270",
-        height:"480",backgroundColor:"#b2fcda", style:{alignItems: 'center', overflow:'hidden', paddingRight:"3", paddingLeft:"3", paddingTop:"10" } })
+        height:"480",backgroundColor:"#b2fcda", style:{alignItems: 'center',justifyContent:'center', overflow:'hidden', paddingRight:"3", paddingLeft:"3", paddingTop:"10" } })
   .then(function (dataUrl: string) {
     const link = document.createElement('a');
     link.download = 'Kanye_Quote_Insta_Story';
