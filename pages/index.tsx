@@ -1,15 +1,22 @@
 import styles from '../styles/Home.module.css'
 import type { NextPage } from 'next'
+import dynamic from "next/dynamic";
 import { useState } from 'react';
 import Head from 'next/head'
 import { Text, Button, Box } from '@mantine/core';
 import { TwitterShareButton, } from 'next-share'
-import { AiOutlineTwitter } from "react-icons/ai";
-
+import { AiOutlineTwitter, AiOutlineInstagram } from "react-icons/ai";
 
 const Home: NextPage = () => {
   const [kanyeQuote, setkanyeQuote] = useState("Believe in your flyness…conquer your shyness.")
   const [buttonText, setButtonText] = useState("Kanye Wisdom")
+  
+  const InstaShare = dynamic(() => import('../components/instaShare'), {
+    ssr: false,
+  })
+  
+
+
 
   const handleClick = async () => {
     try {
@@ -20,8 +27,9 @@ const Home: NextPage = () => {
     } catch (error) {
       console.log('Fetch error: ', error);
     }
-
   }
+
+
   return (
     <div className={styles.container}>
       <Head>
@@ -37,7 +45,7 @@ const Home: NextPage = () => {
         The Mind of a Genius
       </Text>
 
-      <Text className={styles.quote} >
+      <Text className={styles.quote} id="quoteBox" >
         “ {kanyeQuote} ”
         <Text className={styles.kanye}> Kanye West</Text>
       </Text>
@@ -49,7 +57,11 @@ const Home: NextPage = () => {
           hashtags={["kanyewest", "Yeezus", "Pablo", "Yeezy", "Ye", "MrWest"]}
         >
           <AiOutlineTwitter className={styles.tweet} />
-        </TwitterShareButton></Box>
+        </TwitterShareButton>
+
+       <InstaShare/>
+        
+      </Box>
 
 
     </div>
