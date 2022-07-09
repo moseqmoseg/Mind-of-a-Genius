@@ -1,5 +1,5 @@
 import styles from '../styles/Home.module.css'
-import { AiOutlineTwitter, AiOutlineInstagram } from "react-icons/ai";
+import { AiOutlineInstagram } from "react-icons/ai";
 import * as htmlToImage from 'html-to-image';
 import { toPng, toJpeg, toBlob, toPixelData, toSvg } from 'html-to-image';
 
@@ -22,7 +22,7 @@ let quoteBox = document.getElementById('quoteBox')
 }
 
     return (
-        <AiOutlineTwitter className={styles.tweet} onClick={()=>handleClick()} />
+        <AiOutlineInstagram className={styles.tweet} onClick={()=>handleClick()} />
     )
 }
 
